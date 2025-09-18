@@ -185,7 +185,8 @@ var schedule = {
       domain: 'hathaway.cc',
       prodId: { company: 'hathaway.cc', product: 'college-football-calendar' },
       events: events,
-      ttl: 60 * 60 * 24
+      ttl: 60 * 60 * 6, // 6 hours instead of 24 hours
+      refreshInterval: 60 * 60 * 6 // 6 hours refresh interval
     }).toString();
     // console.log(calendar);
     return calendar;
