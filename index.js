@@ -251,33 +251,12 @@ function build_top_25_matchup_calendar(name = 'College Football Top 25 Matchups'
     });
 }
 
-function build_team_calendar(name = 'Notre Dame Football', team_id = 87) {
-  console.log("Building " + name);
-  return schedule.get_team_schedule(team_id)
-    .then(schedule.find_team_games)
-    .then(function(gameIds) {
-      return Promise.all(gameIds.map(schedule.get_game));
-    })
-    .then(function (games) {
-      return games.filter(game => game !== null);
-    })
-    .then(function (games) {
-      return schedule.build_calendar(name, games);
-    })
-    .then(function (calendar_data) {
-      return schedule.save_calendar(name, calendar_data);
-    });
-}
 
 exports.handler = (event, context, callback) => {
   console.log("Received event: ", event);
   build_top_25_calendar().then(function (result) {
     build_top_25_matchup_calendar().then(function (result) {
-      build_team_calendar().then(function (result) {
-        build_team_calendar('Ohio State Football', 194).then(function (result) {
-          callback(null, 'Success');
-        });
-      });
+      callback(null, 'Success');
     });
   });
 };
@@ -290,9 +269,6 @@ if (require.main === module) {
   
   build_top_25_calendar()
     .then(() => build_top_25_matchup_calendar())
-    .then(() => build_team_calendar())
-    .then(() => build_team_calendar('Ohio State Football', 194))
-    .then(() => build_team_calendar('Oklahoma Football', 201))
     .then(() => {
       console.log("All calendars generated successfully!");
     })
