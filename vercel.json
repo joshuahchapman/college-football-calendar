@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/generate-calendars.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/calendars/(.*)",
+      "dest": "/calendars/$1"
+    }
+  ]
+}

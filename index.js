@@ -2,14 +2,14 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 const ical = require('ical-generator');
 const moment = require('moment');
-const AWS = require('aws-sdk');
-const pretty = require("pretty");
+const fs = require('fs');
+const path = require('path');
 
 const game_url_base = "https://www.espn.com/college-football/game/_/gameId/";
 const team_url_base = "https://www.espn.com/college-football/team/_/id/";
 
-// var credentials = new AWS.SharedIniFileCredentials({ profile: 'hathaway' });
-// AWS.config.credentials = credentials;
+// ESPN API endpoints
+const espn_api_base = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football";
 
 var schedule = {
   slugify: function (text){
@@ -22,62 +22,110 @@ var schedule = {
   },
 
   get_weekly_schedule: function () {
-    return request('https://www.espn.com/college-football/schedule');
+    // Get current week's schedule from ESPN API - get a range of dates
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    
+    // Get games from a week range (7 days)
+    const startDate = new Date(today);
+    startDate.setDate(today.getDate() - 3); // Start 3 days ago
+    const endDate = new Date(today);
+    endDate.setDate(today.getDate() + 3); // End 3 days from now
+    
+    const startYear = startDate.getFullYear();
+    const startMonth = String(startDate.getMonth() + 1).padStart(2, '0');
+    const startDay = String(startDate.getDate()).padStart(2, '0');
+    
+    const endYear = endDate.getFullYear();
+    const endMonth = String(endDate.getMonth() + 1).padStart(2, '0');
+    const endDay = String(endDate.getDate()).padStart(2, '0');
+    
+    return request(`${espn_api_base}/scoreboard?dates=${startYear}${startMonth}${startDay}-${endYear}${endMonth}${endDay}&limit=100`);
   },
 
-  get_team_page: function (team_id) {
-    return request(team_url_base + team_id);
+  get_team_schedule: function (team_id) {
+    return request(`${espn_api_base}/teams/${team_id}/schedule`);
   },
 
-  find_team_games: function (html) {
-    var $ = cheerio.load(html);
-    return $("a.Schedule__Game").map(function (i, e) {
-      var id = $(e).attr('href').match(/gameId\/(\d*)/)[1];
-      return id;
-    }).get();
+  find_games: function (api_data) {
+    const data = JSON.parse(api_data);
+    return data.events.map(event => event.id);
   },
 
-  find_games: function (html) {
-    var $ = cheerio.load(html);
-    return $('td.date__col').map(function (i, e) {
-      var id = $(e).find('a').attr('href').match(/gameId\/(\d*)/)[1];
-      return id;
-    }).get();
+  find_team_games: function (api_data) {
+    const data = JSON.parse(api_data);
+    return data.events.map(event => event.id);
   },
 
   get_game: function (game_id) {
     console.log("Getting game " + game_url_base + game_id);
-    return request(game_url_base + game_id)
-      .then(function (html) {
-        var $game = cheerio.load(html);
-        var time = $game('.GameInfo__Meta').find('span').slice(0,1).text().trim();
-        var network = $game('.GameInfo__Meta').find('span').slice(1,2).text().trim();
-        network = network.replace('Coverage: ', '');
-        var $away_team = $game('.Gamestrip__TeamContent').slice(0,1);
-        var $home_team = $game('.Gamestrip__TeamContent').slice(1,2);
-        return {
+    return request(`${espn_api_base}/summary?event=${game_id}`)
+      .then(function (api_data) {
+        const data = JSON.parse(api_data);
+        
+        const header = data.header;
+        const competition = header.competitions[0];
+        
+        if (!competition) {
+          console.log(`Missing competition data for game ${game_id}`);
+          return null;
+        }
+        
+        // Extract team information from competition
+        const homeTeam = competition.competitors.find(team => team.homeAway === 'home');
+        const awayTeam = competition.competitors.find(team => team.homeAway === 'away');
+        
+        if (!homeTeam || !awayTeam) {
+          console.log(`Missing team data for game ${game_id}`);
+          return null;
+        }
+        
+        // Get rankings if available
+        const homeRank = homeTeam.rank ? homeTeam.rank.toString() : '';
+        const awayRank = awayTeam.rank ? awayTeam.rank.toString() : '';
+        
+        // Get scores
+        const homeScore = homeTeam.score || '';
+        const awayScore = awayTeam.score || '';
+        
+        // Get game time
+        const gameTime = competition.date ? new Date(competition.date).toISOString() : '';
+        
+        // Get TV network
+        const network = competition.broadcasts && competition.broadcasts.length > 0 ? competition.broadcasts[0].media.shortName : '';
+        
+        const gameData = {
           id: game_id,
           network: network,
-          time: time,
-          line: $game('.GameInfo__BettingItem.line').text().trim(),
-          over_under: $game('.GameInfo__BettingItem.ou').text().trim(),
+          time: gameTime,
+          line: data.odds && data.odds.length > 0 ? data.odds[0].spread : '',
+          over_under: data.odds && data.odds.length > 0 ? data.odds[0].overUnder : '',
           home: {
-            name: $home_team.find('.ScoreCell__TeamName').text().trim(),
-            rank: $home_team.find('.ScoreCell__Rank').text().trim(),
-            score: $home_team.find('.Gamestrip__Score .score').text().trim()
+            name: homeTeam.team.displayName,
+            rank: homeRank,
+            score: homeScore
           },
           visitor: {
-            name: $away_team.find('.ScoreCell__TeamName').text().trim(),
-            rank: $away_team.find('.ScoreCell__Rank').text().trim(),
-            score: $away_team.find('.Gamestrip__Score .score').text().trim()
+            name: awayTeam.team.displayName,
+            rank: awayRank,
+            score: awayScore
           }
         };
+        
+        // console.log(`Processed game ${game_id}:`, gameData);
+        return gameData;
+      })
+      .catch(function(error) {
+        console.log(`Error getting game ${game_id}:`, error.message);
+        return null;
       });
   },
 
   build_calendar: function (name, games) {
-    console.log(games);
-    var events = games.map(function (game) {
+    console.log(`Building calendar for ${name} with ${games.length} games`);
+    var events = games.filter(game => game && game.time && game.time !== '').map(function (game) {
       var summary = String.fromCodePoint(127944) + " ";
       if (game.visitor.rank !== '') {
         summary += "#" + game.visitor.rank + " ";
@@ -111,16 +159,23 @@ var schedule = {
         }
       }
 
+      // Parse the game time properly
+      var gameTime = moment(game.time);
+      if (!gameTime.isValid()) {
+        console.log(`Invalid time for game ${game.id}: ${game.time}`);
+        return null;
+      }
+
       return {
-        start: moment(Date.parse(game.time)).add(5, 'hour'),
-        end: moment(Date.parse(game.time)).add(5, 'hour').add(3.5, 'hour'),
+        start: gameTime,
+        end: gameTime.clone().add(3.5, 'hour'),
         timestamp: moment(),
         summary: summary,
         location: location,
         url: game_url_base + game.id,
         description: description
       };
-    });
+    }).filter(event => event !== null);
 
     var calendar = ical({
       name: name,
@@ -134,17 +189,19 @@ var schedule = {
     return calendar;
   },
 
-  put_in_s3: function (name, calendar_data) {
-    var s3 = new AWS.S3();
-    var params = {
-      Bucket: 'hathaway.cc',
-      Key: 'calendars/' + schedule.slugify(name) + '.ics',
-      Body: calendar_data
-    };
-    return s3.putObject(params, function (err, data) {
-      if (err) console.log(err, err.stack); // an error occurred
-      else console.log(data);           // successful response
-    });
+  save_calendar: function (name, calendar_data) {
+    const filename = schedule.slugify(name) + '.ics';
+    const filepath = path.join(__dirname, 'calendars', filename);
+    
+    // Create calendars directory if it doesn't exist
+    const calendarsDir = path.join(__dirname, 'calendars');
+    if (!fs.existsSync(calendarsDir)) {
+      fs.mkdirSync(calendarsDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(filepath, calendar_data);
+    console.log(`Saved calendar: ${filepath}`);
+    return Promise.resolve();
   },
 
   is_top_25_matchup: function (game) {
@@ -160,13 +217,17 @@ function build_top_25_calendar(name = 'College Football Top 25') {
   console.log("Building " + name);
   return schedule.get_weekly_schedule()
     .then(schedule.find_games)
-    .map(schedule.get_game)
-    .filter(schedule.is_top_25)
+    .then(function(gameIds) {
+      return Promise.all(gameIds.map(schedule.get_game));
+    })
+    .then(function (games) {
+      return games.filter(game => game !== null).filter(schedule.is_top_25);
+    })
     .then(function (games) {
       return schedule.build_calendar(name, games);
     })
     .then(function (calendar_data) {
-      return schedule.put_in_s3(name, calendar_data);
+      return schedule.save_calendar(name, calendar_data);
     });
 }
 
@@ -174,26 +235,35 @@ function build_top_25_matchup_calendar(name = 'College Football Top 25 Matchups'
   console.log("Building " + name);
   return schedule.get_weekly_schedule()
     .then(schedule.find_games)
-    .map(schedule.get_game)
-    .filter(schedule.is_top_25_matchup)
+    .then(function(gameIds) {
+      return Promise.all(gameIds.map(schedule.get_game));
+    })
+    .then(function (games) {
+      return games.filter(game => game !== null).filter(schedule.is_top_25_matchup);
+    })
     .then(function (games) {
       return schedule.build_calendar(name, games);
     })
     .then(function (calendar_data) {
-      return schedule.put_in_s3(name, calendar_data);
+      return schedule.save_calendar(name, calendar_data);
     });
 }
 
 function build_team_calendar(name = 'Notre Dame Football', team_id = 87) {
   console.log("Building " + name);
-  return schedule.get_team_page(team_id)
+  return schedule.get_team_schedule(team_id)
     .then(schedule.find_team_games)
-    .map(schedule.get_game)
+    .then(function(gameIds) {
+      return Promise.all(gameIds.map(schedule.get_game));
+    })
+    .then(function (games) {
+      return games.filter(game => game !== null);
+    })
     .then(function (games) {
       return schedule.build_calendar(name, games);
     })
     .then(function (calendar_data) {
-      return schedule.put_in_s3(name, calendar_data);
+      return schedule.save_calendar(name, calendar_data);
     });
 }
 
@@ -213,14 +283,18 @@ exports.handler = (event, context, callback) => {
 
 
 // For testing locally
-build_top_25_calendar().then(function (result) {
-  build_top_25_matchup_calendar().then(function (result) {
-    build_team_calendar().then(function (result) {
-      build_team_calendar('Ohio State Football', 194).then(function (result) {
-        build_team_calendar('Oklahoma Football', 201).then(function (result) {
-          console.log("Success");
-        });
-      });
+if (require.main === module) {
+  console.log("Starting college football calendar generation...");
+  
+  build_top_25_calendar()
+    .then(() => build_top_25_matchup_calendar())
+    .then(() => build_team_calendar())
+    .then(() => build_team_calendar('Ohio State Football', 194))
+    .then(() => build_team_calendar('Oklahoma Football', 201))
+    .then(() => {
+      console.log("All calendars generated successfully!");
+    })
+    .catch(error => {
+      console.error("Error generating calendars:", error);
     });
-  });
-});
+}
