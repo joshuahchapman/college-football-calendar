@@ -2,8 +2,8 @@ name: Update College Football Calendars
 
 on:
   schedule:
-    # Run every day at 6 AM UTC (1 AM EST, 10 PM PST)
-    - cron: '0 6 * * *'
+    # Run every Tuesday at 8 AM Pacific Time (3 PM UTC)
+    - cron: '0 15 * * 2'
   workflow_dispatch: # Allow manual triggering
 
 jobs:
@@ -42,5 +42,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add public/calendars/
-        git commit -m "Update college football calendars - $(date)"
+        git commit -m "Update college football calendars for next week - $(date +'%Y-%m-%d')"
         git push
