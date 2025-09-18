@@ -179,14 +179,17 @@ var schedule = {
       };
     }).filter(event => event !== null);
 
+    // Add timestamp to force cache refresh
+    const timestamp = Math.floor(Date.now() / 1000);
+    
     var calendar = ical({
       name: name,
-      url: 'https://hathaway.cc/calendars/' + schedule.slugify(name),
+      url: 'https://hathaway.cc/calendars/' + schedule.slugify(name) + '?v=' + timestamp,
       domain: 'hathaway.cc',
       prodId: { company: 'hathaway.cc', product: 'college-football-calendar' },
       events: events,
-      ttl: 60 * 60 * 6, // 6 hours instead of 24 hours
-      refreshInterval: 60 * 60 * 6 // 6 hours refresh interval
+      ttl: 60 * 60 * 1, // 1 hour cache
+      refreshInterval: 60 * 60 * 1 // 1 hour refresh interval
     }).toString();
     // console.log(calendar);
     return calendar;
