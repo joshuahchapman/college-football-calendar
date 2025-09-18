@@ -22,27 +22,27 @@ var schedule = {
   },
 
   get_weekly_schedule: function () {
-    // Get next week's schedule from ESPN API
+    // Get games from today through next Monday
     const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
     
-    // Calculate the start of next week (Monday)
+    // Calculate days until next Monday
+    const daysUntilMonday = (1 + 7 - dayOfWeek) % 7; // Days until next Monday (0 = Sunday)
     const nextMonday = new Date(today);
-    const daysUntilMonday = (1 + 7 - today.getDay()) % 7; // Days until next Monday (0 = Sunday)
     nextMonday.setDate(today.getDate() + (daysUntilMonday === 0 ? 7 : daysUntilMonday));
     
-    // Calculate the end of next week (Sunday)
-    const nextSunday = new Date(nextMonday);
-    nextSunday.setDate(nextMonday.getDate() + 6);
+    const startDate = today;
+    const endDate = nextMonday;
     
-    const startYear = nextMonday.getFullYear();
-    const startMonth = String(nextMonday.getMonth() + 1).padStart(2, '0');
-    const startDay = String(nextMonday.getDate()).padStart(2, '0');
+    const startYear = startDate.getFullYear();
+    const startMonth = String(startDate.getMonth() + 1).padStart(2, '0');
+    const startDay = String(startDate.getDate()).padStart(2, '0');
     
-    const endYear = nextSunday.getFullYear();
-    const endMonth = String(nextSunday.getMonth() + 1).padStart(2, '0');
-    const endDay = String(nextSunday.getDate()).padStart(2, '0');
+    const endYear = endDate.getFullYear();
+    const endMonth = String(endDate.getMonth() + 1).padStart(2, '0');
+    const endDay = String(endDate.getDate()).padStart(2, '0');
     
-    console.log(`Getting games for next week: ${startYear}-${startMonth}-${startDay} to ${endYear}-${endMonth}-${endDay}`);
+    console.log(`Getting games from today through next Monday: ${startYear}-${startMonth}-${startDay} to ${endYear}-${endMonth}-${endDay}`);
     
     return request(`${espn_api_base}/scoreboard?dates=${startYear}${startMonth}${startDay}-${endYear}${endMonth}${endDay}&limit=100`);
   },
