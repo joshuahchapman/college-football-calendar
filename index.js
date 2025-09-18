@@ -191,10 +191,10 @@ var schedule = {
 
   save_calendar: function (name, calendar_data) {
     const filename = schedule.slugify(name) + '.ics';
-    const filepath = path.join(__dirname, 'calendars', filename);
+    const filepath = path.join(__dirname, 'public', 'calendars', filename);
     
-    // Create calendars directory if it doesn't exist
-    const calendarsDir = path.join(__dirname, 'calendars');
+    // Create public/calendars directory if it doesn't exist
+    const calendarsDir = path.join(__dirname, 'public', 'calendars');
     if (!fs.existsSync(calendarsDir)) {
       fs.mkdirSync(calendarsDir, { recursive: true });
     }

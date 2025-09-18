@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hathaway.cc//college-football-calendar//EN
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups
+NAME:College Football Top 25 Matchups
+X-WR-CALNAME:College Football Top 25 Matchups
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:f7a09afa-92fe-4dc3-bd45-7ebf41739289
+SEQUENCE:0
+DTSTAMP:20250918T010700Z
+DTSTART:20250920T160000Z
+DTEND:20250920T193000Z
+SUMMARY:🏈 #17 Texas Tech Red Raiders at #16 Utah Utes
+LOCATION:Watch on FOX
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175690
+ 1
+END:VEVENT
+BEGIN:VEVENT
+UID:88c8e152-c378-4eaf-bc1b-f217aacec399
+SEQUENCE:0
+DTSTAMP:20250918T010700Z
+DTSTART:20250920T193000Z
+DTEND:20250920T230000Z
+SUMMARY:🏈 #22 Auburn Tigers at #11 Oklahoma Sooners
+LOCATION:Watch on ABC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175271
+ 4
+END:VEVENT
+BEGIN:VEVENT
+UID:7f7907a5-d47f-4348-92da-df2e2239881d
+SEQUENCE:0
+DTSTAMP:20250918T010700Z
+DTSTART:20250920T233000Z
+DTEND:20250921T030000Z
+SUMMARY:🏈 #9 Illinois Fighting Illini at #19 Indiana Hoosiers
+LOCATION:Watch on NBC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175284
+ 3
+END:VEVENT
+END:VCALENDAR
