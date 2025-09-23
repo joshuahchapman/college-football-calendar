@@ -1,46 +1,58 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17582
- 12716
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17586
+ 39968
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:7f30bac4-fc7e-4d3e-9ec8-c8fddfcb4fef
+UID:620c074c-0d9f-49a9-bd50-33131f7082f8
 SEQUENCE:0
-DTSTAMP:20250918T162516Z
-DTSTART:20250920T160000Z
-DTEND:20250920T193000Z
-SUMMARY:🏈 #17 Texas Tech Red Raiders at #16 Utah Utes
+DTSTAMP:20250923T150608Z
+DTSTART:20250927T160000Z
+DTEND:20250927T193000Z
+SUMMARY:🏈 #21 USC Trojans at #23 Illinois Fighting Illini
 LOCATION:Watch on FOX
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175690
- 1
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175285
+ 0
 END:VEVENT
 BEGIN:VEVENT
-UID:89b731de-88d6-489b-bfc6-24e8978cde06
+UID:20aafa54-1a73-4193-b9bb-86d768e01d4e
 SEQUENCE:0
-DTSTAMP:20250918T162516Z
-DTSTART:20250920T193000Z
-DTEND:20250920T230000Z
-SUMMARY:🏈 #22 Auburn Tigers at #11 Oklahoma Sooners
+DTSTAMP:20250923T150608Z
+DTSTART:20250927T193000Z
+DTEND:20250927T230000Z
+SUMMARY:🏈 #4 LSU Tigers at #13 Ole Miss Rebels
 LOCATION:Watch on ABC
 DESCRIPTION:
 URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175271
+ 9
+END:VEVENT
+BEGIN:VEVENT
+UID:16be717f-4e1a-4bcf-beb8-e57e4457ac9e
+SEQUENCE:0
+DTSTAMP:20250923T150608Z
+DTSTART:20250927T233000Z
+DTEND:20250928T030000Z
+SUMMARY:🏈 #6 Oregon Ducks at #3 Penn State Nittany Lions
+LOCATION:Watch on NBC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175285
  4
 END:VEVENT
 BEGIN:VEVENT
-UID:f4063f1e-1c24-4251-beab-73d3a5baaaec
+UID:525b6aa5-d94a-4556-9d3d-866b0d01a385
 SEQUENCE:0
-DTSTAMP:20250918T162516Z
-DTSTART:20250920T233000Z
-DTEND:20250921T030000Z
-SUMMARY:🏈 #9 Illinois Fighting Illini at #19 Indiana Hoosiers
-LOCATION:Watch on NBC
+DTSTAMP:20250923T150608Z
+DTSTART:20250927T233000Z
+DTEND:20250928T030000Z
+SUMMARY:🏈 #17 Alabama Crimson Tide at #5 Georgia Bulldogs
+LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175284
- 3
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175271
+ 8
 END:VEVENT
 END:VCALENDAR
