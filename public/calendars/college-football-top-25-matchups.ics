@@ -1,34 +1,46 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17592
- 44751
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17598
+ 49570
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:fc964b3f-3527-427f-b7a6-2cd38c135160
+UID:708a46ee-1599-46de-8126-ecc992a8023c
 SEQUENCE:0
-DTSTAMP:20250930T150551Z
-DTSTART:20251004T193000Z
-DTEND:20251004T230000Z
-SUMMARY:🏈 #16 Vanderbilt Commodores at #10 Alabama Crimson Tide
-LOCATION:Watch on ABC
+DTSTAMP:20251007T150610Z
+DTSTART:20251011T160000Z
+DTEND:20251011T193000Z
+SUMMARY:🏈 #1 Ohio State Buckeyes at #17 Illinois Fighting Illini
+LOCATION:Watch on FOX
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175272
- 6
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175286
+ 5
 END:VEVENT
 BEGIN:VEVENT
-UID:da7ed158-ba29-466f-abb4-895a1f9887e9
+UID:70590021-9ce2-4170-89db-8d272d8a188c
 SEQUENCE:0
-DTSTAMP:20250930T150551Z
-DTSTART:20251004T233000Z
-DTEND:20251005T030000Z
-SUMMARY:🏈 #3 Miami Hurricanes at #18 Florida State Seminoles
+DTSTAMP:20251007T150610Z
+DTSTART:20251011T160000Z
+DTEND:20251011T193000Z
+SUMMARY:🏈 #8 Alabama Crimson Tide at #14 Missouri Tigers
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175455
- 3
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175273
+ 4
+END:VEVENT
+BEGIN:VEVENT
+UID:3d726698-ab29-4074-ba83-4c7b98561f06
+SEQUENCE:0
+DTSTAMP:20251007T150610Z
+DTSTART:20251011T193000Z
+DTEND:20251011T230000Z
+SUMMARY:🏈 #7 Indiana Hoosiers at #3 Oregon Ducks
+LOCATION:Watch on CBS
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175287
+ 0
 END:VEVENT
 END:VCALENDAR
