@@ -1,58 +1,46 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17628
- 73560
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17634
+ 78380
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:ef3ff359-32f8-4680-baee-59f7304d0670
+UID:d1e742de-5405-4797-9ff4-de76c347c238
 SEQUENCE:0
-DTSTAMP:20251111T150600Z
-DTSTART:20251115T170000Z
-DTEND:20251115T203000Z
-SUMMARY:🏈 #10 Notre Dame Fighting Irish at #24 Pittsburgh Panthers
-LOCATION:Watch on ABC
+DTSTAMP:20251118T150620Z
+DTSTART:20251122T203000Z
+DTEND:20251123T000000Z
+SUMMARY:🏈 #17 USC Trojans at #8 Oregon Ducks
+LOCATION:Watch on CBS
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175459
- 7
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175291
+ 1
 END:VEVENT
 BEGIN:VEVENT
-UID:35ed72c1-ad4b-4d8f-8b9a-d500fb6ef969
+UID:93c54736-fa8d-49d1-92c0-2207b9d72441
 SEQUENCE:0
-DTSTAMP:20251111T150600Z
-DTSTART:20251115T203000Z
-DTEND:20251116T000000Z
-SUMMARY:🏈 #12 Oklahoma Sooners at #4 Alabama Crimson Tide
-LOCATION:Watch on ABC
+DTSTAMP:20251118T150620Z
+DTSTART:20251123T000000Z
+DTEND:20251123T033000Z
+SUMMARY:🏈 #22 Pittsburgh Panthers at #16 Georgia Tech Yellow Jackets
+LOCATION:Watch on ESPN
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175276
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175460
+ 1
+END:VEVENT
+BEGIN:VEVENT
+UID:78bdca75-f5a8-40da-bbc7-32fc5431042e
+SEQUENCE:0
+DTSTAMP:20251118T150620Z
+DTSTART:20251123T010000Z
+DTEND:20251123T043000Z
+SUMMARY:🏈 #12 BYU Cougars at #25 Cincinnati Bearcats
+LOCATION:Watch on FOX
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175695
  5
-END:VEVENT
-BEGIN:VEVENT
-UID:c0f89efe-4518-4fe5-b8d9-d0415f1c5ebf
-SEQUENCE:0
-DTSTAMP:20251111T150600Z
-DTSTART:20251115T203000Z
-DTEND:20251116T000000Z
-SUMMARY:🏈 #20 Iowa Hawkeyes at #19 USC Trojans
-LOCATION:Watch on ERADM
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175290
- 7
-END:VEVENT
-BEGIN:VEVENT
-UID:b0155f7d-e8b9-4c8d-bb4d-d2366b730b8b
-SEQUENCE:0
-DTSTAMP:20251111T150600Z
-DTSTART:20251116T003000Z
-DTEND:20251116T040000Z
-SUMMARY:🏈 #11 Texas Longhorns at #5 Georgia Bulldogs
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175276
- 6
 END:VEVENT
 END:VCALENDAR
