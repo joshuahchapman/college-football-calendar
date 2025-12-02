@@ -1,58 +1,46 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17640
- 83162
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17646
+ 87992
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:e281288b-4c0a-4c21-b209-539171f0e535
+UID:53f9befe-9c9c-4df1-be03-956da520e90d
 SEQUENCE:0
-DTSTAMP:20251125T150602Z
-DTSTART:20251128T203000Z
-DTEND:20251129T000000Z
-SUMMARY:🏈 #4 Georgia Bulldogs at #16 Georgia Tech Yellow Jackets
+DTSTAMP:20251202T150632Z
+DTSTART:20251206T170000Z
+DTEND:20251206T203000Z
+SUMMARY:🏈 #11 BYU Cougars at #5 Texas Tech Red Raiders
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175278
- 6
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177732
+ 7
 END:VEVENT
 BEGIN:VEVENT
-UID:633d007d-8f3c-46a8-a5c6-6d9d28bd225a
+UID:104bdf20-5427-4919-a917-1e37bff26685
 SEQUENCE:0
-DTSTAMP:20251125T150602Z
-DTSTART:20251129T003000Z
-DTEND:20251129T040000Z
-SUMMARY:🏈 #3 Texas A&M Aggies at #17 Texas Longhorns
+DTSTAMP:20251202T150632Z
+DTSTART:20251206T210000Z
+DTEND:20251207T003000Z
+SUMMARY:🏈 #4 Georgia Bulldogs at #10 Alabama Crimson Tide
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175279
- 2
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177735
+ 1
 END:VEVENT
 BEGIN:VEVENT
-UID:ead79257-c9d6-4fe3-91fd-3939c3e8ee0f
+UID:ea02c27e-9428-4431-865e-4e5d00ad8bcd
 SEQUENCE:0
-DTSTAMP:20251125T150602Z
-DTSTART:20251129T170000Z
-DTEND:20251129T203000Z
-SUMMARY:🏈 #1 Ohio State Buckeyes at #18 Michigan Wolverines
+DTSTAMP:20251202T150632Z
+DTSTART:20251207T010000Z
+DTEND:20251207T043000Z
+SUMMARY:🏈 #2 Indiana Hoosiers at #1 Ohio State Buckeyes
 LOCATION:Watch on FOX
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175292
- 1
-END:VEVENT
-BEGIN:VEVENT
-UID:cf96e2ce-05fa-45a3-9f65-e7b0071ce361
-SEQUENCE:0
-DTSTAMP:20251125T150602Z
-DTSTART:20251129T203000Z
-DTEND:20251130T000000Z
-SUMMARY:🏈 #14 Vanderbilt Commodores at #20 Tennessee Volunteers
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40175279
- 1
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177735
+ 3
 END:VEVENT
 END:VCALENDAR
