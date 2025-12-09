@@ -1,46 +1,10 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17646
- 87992
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17652
+ 92802
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
-BEGIN:VEVENT
-UID:53f9befe-9c9c-4df1-be03-956da520e90d
-SEQUENCE:0
-DTSTAMP:20251202T150632Z
-DTSTART:20251206T170000Z
-DTEND:20251206T203000Z
-SUMMARY:🏈 #11 BYU Cougars at #5 Texas Tech Red Raiders
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177732
- 7
-END:VEVENT
-BEGIN:VEVENT
-UID:104bdf20-5427-4919-a917-1e37bff26685
-SEQUENCE:0
-DTSTAMP:20251202T150632Z
-DTSTART:20251206T210000Z
-DTEND:20251207T003000Z
-SUMMARY:🏈 #4 Georgia Bulldogs at #10 Alabama Crimson Tide
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177735
- 1
-END:VEVENT
-BEGIN:VEVENT
-UID:ea02c27e-9428-4431-865e-4e5d00ad8bcd
-SEQUENCE:0
-DTSTAMP:20251202T150632Z
-DTSTART:20251207T010000Z
-DTEND:20251207T043000Z
-SUMMARY:🏈 #2 Indiana Hoosiers at #1 Ohio State Buckeyes
-LOCATION:Watch on FOX
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177735
- 3
-END:VEVENT
 END:VCALENDAR
