@@ -1,10 +1,58 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17652
- 92802
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17658
+ 97652
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:0c52117a-0796-496c-a5dc-eb7475a86c6b
+SEQUENCE:0
+DTSTAMP:20251216T150732Z
+DTSTART:20251220T010000Z
+DTEND:20251220T043000Z
+SUMMARY:🏈 #9 Alabama Crimson Tide at #8 Oklahoma Sooners
+LOCATION:Watch on ABC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177984
+ 0
+END:VEVENT
+BEGIN:VEVENT
+UID:028135aa-9bd9-4f66-811a-96df5708f6c5
+SEQUENCE:0
+DTSTAMP:20251216T150732Z
+DTSTART:20251220T170000Z
+DTEND:20251220T203000Z
+SUMMARY:🏈 #10 Miami Hurricanes at #7 Texas A&M Aggies
+LOCATION:Watch on ABC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177984
+ 1
+END:VEVENT
+BEGIN:VEVENT
+UID:cee54599-9070-4463-81f8-cdda536a73f4
+SEQUENCE:0
+DTSTAMP:20251216T150732Z
+DTSTART:20251220T203000Z
+DTEND:20251221T000000Z
+SUMMARY:🏈 #11 Tulane Green Wave at #6 Ole Miss Rebels
+LOCATION:Watch on TNT
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177984
+ 2
+END:VEVENT
+BEGIN:VEVENT
+UID:31e89faf-d841-4bb0-9060-526fcfae7f46
+SEQUENCE:0
+DTSTAMP:20251216T150732Z
+DTSTART:20251221T003000Z
+DTEND:20251221T040000Z
+SUMMARY:🏈 #12 James Madison Dukes at #5 Oregon Ducks
+LOCATION:Watch on TNT
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40177984
+ 3
+END:VEVENT
 END:VCALENDAR
