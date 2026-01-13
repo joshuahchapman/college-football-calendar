@@ -1,34 +1,22 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17677
- 12000
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17683
+ 16941
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:5c0c61dc-3266-4609-8e56-da476f942c8e
+UID:13c98dd5-97ee-4b6b-af94-a0454426cd5c
 SEQUENCE:0
-DTSTAMP:20260106T150640Z
-DTSTART:20260109T003000Z
-DTEND:20260109T040000Z
-SUMMARY:🏈 #10 Miami Hurricanes at #6 Ole Miss Rebels
+DTSTAMP:20260113T150901Z
+DTSTART:20260120T003000Z
+DTEND:20260120T040000Z
+SUMMARY:🏈 #10 Miami Hurricanes at #1 Indiana Hoosiers
 LOCATION:Watch on ESPN
 DESCRIPTION:
 URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40176907
- 5
-END:VEVENT
-BEGIN:VEVENT
-UID:af2bdf70-98d5-41ca-a7ef-bf9e97628530
-SEQUENCE:0
-DTSTAMP:20260106T150640Z
-DTSTART:20260110T003000Z
-DTEND:20260110T040000Z
-SUMMARY:🏈 #5 Oregon Ducks at #1 Indiana Hoosiers
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40176907
- 4
+ 6
 END:VEVENT
 END:VCALENDAR
