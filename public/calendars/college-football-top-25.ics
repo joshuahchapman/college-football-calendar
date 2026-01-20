@@ -1,21 +1,9 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25?v=1768316940
+URL:https://hathaway.cc/calendars/college-football-top-25?v=1768921846
 NAME:College Football Top 25
 X-WR-CALNAME:College Football Top 25
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
-BEGIN:VEVENT
-UID:55c4c9f1-6957-4e46-9fda-661737d69b60
-SEQUENCE:0
-DTSTAMP:20260113T150900Z
-DTSTART:20260120T003000Z
-DTEND:20260120T040000Z
-SUMMARY:🏈 #10 Miami Hurricanes at #1 Indiana Hoosiers
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40176907
- 6
-END:VEVENT
 END:VCALENDAR
