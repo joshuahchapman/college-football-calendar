@@ -1,9 +1,21 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25?v=1787067049
+URL:https://hathaway.cc/calendars/college-football-top-25?v=1787672442
 NAME:College Football Top 25
 X-WR-CALNAME:College Football Top 25
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:dfcb82e7-abd1-4419-b3ed-da5162475b55
+SEQUENCE:0
+DTSTAMP:20260825T154042Z
+DTSTART:20260829T190000Z
+DTEND:20260829T223000Z
+SUMMARY:🏈 San José State Spartans at #14 USC Trojans
+LOCATION:Watch on NBC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40186449
+ 4
+END:VEVENT
 END:VCALENDAR
