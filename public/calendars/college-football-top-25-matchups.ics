@@ -1,10 +1,22 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17876
- 72442
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17882
+ 86210
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:31c9ec09-75ad-44c4-b455-5aeae770fe09
+SEQUENCE:0
+DTSTAMP:20260901T181010Z
+DTSTART:20260906T233000Z
+DTEND:20260907T030000Z
+SUMMARY:🏈 #24 Louisville Cardinals at #9 Ole Miss Rebels
+LOCATION:Watch on ABC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185666
+ 1
+END:VEVENT
 END:VCALENDAR
