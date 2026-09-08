@@ -1,22 +1,34 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17882
- 86210
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17888
+ 91649
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:31c9ec09-75ad-44c4-b455-5aeae770fe09
+UID:360244d4-098f-4646-a4f9-72f373e37e01
 SEQUENCE:0
-DTSTAMP:20260901T181010Z
-DTSTART:20260906T233000Z
-DTEND:20260907T030000Z
-SUMMARY:🏈 #24 Louisville Cardinals at #9 Ole Miss Rebels
+DTSTAMP:20260908T182049Z
+DTSTART:20260912T160000Z
+DTEND:20260912T193000Z
+SUMMARY:🏈 #10 Oklahoma Sooners at #16 Michigan Wolverines
+LOCATION:Watch on FOX
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185667
+ 9
+END:VEVENT
+BEGIN:VEVENT
+UID:1e6410ee-d8c4-4886-a011-4dd11ca2d47a
+SEQUENCE:0
+DTSTAMP:20260908T182049Z
+DTSTART:20260912T233000Z
+DTEND:20260913T030000Z
+SUMMARY:🏈 #1 Ohio State Buckeyes at #5 Texas Longhorns
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185666
- 1
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185668
+ 2
 END:VEVENT
 END:VCALENDAR
