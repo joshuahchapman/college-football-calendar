@@ -1,5 +1,4 @@
 const request = require('request-promise');
-const cheerio = require('cheerio');
 const ical = require('ical-generator');
 const moment = require('moment');
 const fs = require('fs');
@@ -44,7 +43,22 @@ var schedule = {
     
     console.log(`Getting games from today through next Monday: ${startYear}-${startMonth}-${startDay} to ${endYear}-${endMonth}-${endDay}`);
     
-    return request(`${espn_api_base}/scoreboard?dates=${startYear}${startMonth}${startDay}-${endYear}${endMonth}${endDay}&limit=100`);
+    // ESPN rejects date-range scoreboard requests. Fetch each day separately.
+    const requests = [];
+    for (const date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
+      const day = moment(date).format('YYYYMMDD');
+      requests.push(request({
+        uri: `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}&groups=80&limit=1000`,
+        timeout: 30000
+      }).then(body => {
+        const data = JSON.parse(body);
+        if (!Array.isArray(data.events)) throw new Error(`Missing ESPN events for ${day}`);
+        return data.events;
+      }));
+    }
+    return Promise.all(requests).then(days => JSON.stringify({
+      events: [...new Map(days.flat().map(event => [event.id, event])).values()]
+    }));
   },
 
   get_team_schedule: function (team_id) {
@@ -63,7 +77,7 @@ var schedule = {
 
   get_game: function (game_id) {
     console.log("Getting game " + game_url_base + game_id);
-    return request(`${espn_api_base}/summary?event=${game_id}`)
+    return request({ uri: `${espn_api_base}/summary?event=${game_id}`, timeout: 30000 })
       .then(function (api_data) {
         const data = JSON.parse(api_data);
         
@@ -72,7 +86,7 @@ var schedule = {
         
         if (!competition) {
           console.log(`Missing competition data for game ${game_id}`);
-          return null;
+          throw new Error(`Incomplete ESPN data for game ${game_id}`);
         }
         
         // Extract team information from competition
@@ -81,7 +95,7 @@ var schedule = {
         
         if (!homeTeam || !awayTeam) {
           console.log(`Missing team data for game ${game_id}`);
-          return null;
+          throw new Error(`Incomplete ESPN data for game ${game_id}`);
         }
         
         // Get rankings if available
@@ -121,7 +135,7 @@ var schedule = {
       })
       .catch(function(error) {
         console.log(`Error getting game ${game_id}:`, error.message);
-        return null;
+        throw error;
       });
   },
 
@@ -169,6 +183,7 @@ var schedule = {
       }
 
       return {
+        id: `espn-college-football-${game.id}`,
         start: gameTime,
         end: gameTime.clone().add(3.5, 'hour'),
         timestamp: moment(),
@@ -277,6 +292,10 @@ if (require.main === module) {
       console.log("All calendars generated successfully!");
     })
     .catch(error => {
-      console.error("Error generating calendars:", error);
+      console.error("Error generating calendars:", error.message);
+      process.exitCode = 1;
     });
 }
+
+// Export helpers for regression tests without running the generator.
+exports.schedule = schedule;
