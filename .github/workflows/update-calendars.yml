@@ -24,7 +24,10 @@ jobs:
         node-version: '18'
         
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+      
+    - name: Test
+      run: npm test
       
     - name: Generate calendars
       run: node index.js
@@ -32,7 +35,8 @@ jobs:
     - name: Check for changes
       id: verify-changed-files
       run: |
-        if [ -n "$(git status --porcelain)" ]; then
+        git add public/calendars/
+        if ! git diff --cached --quiet -- public/calendars/; then
           echo "changed=true" >> $GITHUB_OUTPUT
         else
           echo "changed=false" >> $GITHUB_OUTPUT
