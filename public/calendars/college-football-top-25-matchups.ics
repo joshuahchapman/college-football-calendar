@@ -1,58 +1,10 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17921
- 26794
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17925
+ 22598
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
-BEGIN:VEVENT
-UID:espn-college-football-401858488
-SEQUENCE:0
-DTSTAMP:20261016T045954Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 #4 Ohio State Buckeyes at #5 Indiana Hoosiers
-LOCATION:Watch on Fox
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185848
- 8
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856720
-SEQUENCE:0
-DTSTAMP:20261016T045954Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 #16 Mississippi State Bulldogs at #22 LSU Tigers
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
- 0
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856723
-SEQUENCE:0
-DTSTAMP:20261016T045954Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 #6 Alabama Crimson Tide at #14 Tennessee Volunteers
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
- 3
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856721
-SEQUENCE:0
-DTSTAMP:20261016T045954Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 #13 Missouri Tigers at #9 Ole Miss Rebels
-LOCATION:Watch on SEC Network
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
- 1
-END:VEVENT
 END:VCALENDAR

@@ -1,117 +1,141 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25?v=1792126793
+URL:https://hathaway.cc/calendars/college-football-top-25?v=1792522598
 NAME:College Football Top 25
 X-WR-CALNAME:College Football Top 25
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:espn-college-football-401858488
+UID:espn-college-football-401858274
 SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 #4 Ohio State Buckeyes at #5 Indiana Hoosiers
-LOCATION:Watch on Fox
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 Pittsburgh Panthers at #1 Miami Hurricanes
+LOCATION:Watch on ESPN
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185848
- 8
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856724
-SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 Florida Gators at #7 Texas Longhorns
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185827
  4
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856720
+UID:espn-college-football-401858496
 SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 #16 Mississippi State Bulldogs at #22 LSU Tigers
-LOCATION:Watch on ESPN
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 #6 Indiana Hoosiers at Michigan Wolverines
+LOCATION:Watch on Fox
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185849
+ 6
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401856840
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 #8 Texas Tech Red Raiders at Cincinnati Bearcats
+LOCATION:Watch on FS1
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185684
  0
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401858268
+UID:espn-college-football-401856728
 SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 Virginia Cavaliers at #24 SMU Mustangs
-LOCATION:Watch on CW
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185826
- 8
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401858491
-SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T160000Z
-DTEND:20261017T193000Z
-SUMMARY:🏈 #25 Northwestern Wildcats at Michigan State Spartans
-LOCATION:Watch on Peacock
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185849
- 1
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856719
-SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 Auburn Tigers at #1 Georgia Bulldogs
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185671
- 9
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856723
-SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 #6 Alabama Crimson Tide at #14 Tennessee Volunteers
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 #18 LSU Tigers at Auburn Tigers
 LOCATION:Watch on ABC
 DESCRIPTION:
 URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
- 3
+ 8
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856721
+UID:espn-college-football-401858270
 SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 #13 Missouri Tigers at #9 Ole Miss Rebels
-LOCATION:Watch on SEC Network
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 California Golden Bears at #23 SMU Mustangs
+LOCATION:Watch on CW
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185827
+ 0
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401858498
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T160000Z
+DTEND:20261024T193000Z
+SUMMARY:🏈 Rutgers Scarlet Knights at #24 Northwestern Wildcats
+LOCATION:Watch on Peacock
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185849
+ 8
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401856835
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T193000Z
+DTEND:20261024T230000Z
+SUMMARY:🏈 #2 BYU Cougars at UCF Knights
+LOCATION:Watch on Fox
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185683
+ 5
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401858499
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T193000Z
+DTEND:20261024T230000Z
+SUMMARY:🏈 Michigan State Spartans at #9 UCLA Bruins
+LOCATION:Watch on CBS
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185849
+ 9
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401856731
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T193000Z
+DTEND:20261024T230000Z
+SUMMARY:🏈 #11 Tennessee Volunteers at South Carolina Gamecocks
+LOCATION:Watch on ESPN
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185673
  1
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856828
+UID:espn-college-football-401856727
 SEQUENCE:0
-DTSTAMP:20261016T045953Z
-DTSTART:20261017T193000Z
-DTEND:20261017T230000Z
-SUMMARY:🏈 Arizona State Sun Devils at #10 Texas Tech Red Raiders
-LOCATION:Watch on Fox
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T193000Z
+DTEND:20261024T230000Z
+SUMMARY:🏈 Texas A&M Aggies at #13 Alabama Crimson Tide
+LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185682
- 8
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185672
+ 7
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401858497
+SEQUENCE:0
+DTSTAMP:20261020T185638Z
+DTSTART:20261024T193000Z
+DTEND:20261024T230000Z
+SUMMARY:🏈 #15 Iowa Hawkeyes at Minnesota Golden Gophers
+LOCATION:Watch on FS1
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185849
+ 7
 END:VEVENT
 END:VCALENDAR
