@@ -1,10 +1,34 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17925
- 22598
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17931
+ 30611
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:espn-college-football-401856842
+SEQUENCE:0
+DTSTAMP:20261027T195011Z
+DTSTART:20261031T160000Z
+DTEND:20261031T193000Z
+SUMMARY:🏈 #22 Arizona Wildcats at #13 Texas Tech Red Raiders
+LOCATION:Watch on ESPN
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185684
+ 2
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401856734
+SEQUENCE:0
+DTSTAMP:20261027T195011Z
+DTSTART:20261031T193000Z
+DTEND:20261031T230000Z
+SUMMARY:🏈 #17 Florida Gators at #3 Georgia Bulldogs
+LOCATION:Watch on ABC
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185673
+ 4
+END:VEVENT
 END:VCALENDAR
