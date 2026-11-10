@@ -1,46 +1,34 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17937
- 38811
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17943
+ 45138
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:espn-college-football-401856849
+UID:espn-college-football-401856883
 SEQUENCE:0
-DTSTAMP:20261103T204651Z
-DTSTART:20261107T170000Z
-DTEND:20261107T203000Z
-SUMMARY:🏈 #7 BYU Cougars at #3 Utah Utes
+DTSTAMP:20261110T211218Z
+DTSTART:20261114T203000Z
+DTEND:20261115T000000Z
+SUMMARY:🏈 #18 Missouri Tigers at #2 Georgia Bulldogs
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185684
- 9
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856743
-SEQUENCE:0
-DTSTAMP:20261103T204651Z
-DTSTART:20261107T170000Z
-DTEND:20261107T203000Z
-SUMMARY:🏈 #10 Texas Longhorns at #19 Missouri Tigers
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185674
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185688
  3
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856740
+UID:espn-college-football-401858518
 SEQUENCE:0
-DTSTAMP:20261103T204651Z
-DTSTART:20261107T203000Z
-DTEND:20261108T000000Z
-SUMMARY:🏈 #9 Alabama Crimson Tide at #15 LSU Tigers
-LOCATION:Watch on ABC
+DTSTAMP:20261110T211218Z
+DTSTART:20261114T203000Z
+DTEND:20261115T000000Z
+SUMMARY:🏈 #20 USC Trojans at #4 Indiana Hoosiers
+LOCATION:Watch on CBS
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185674
- 0
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185851
+ 8
 END:VEVENT
 END:VCALENDAR
