@@ -1,153 +1,105 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25?v=1794345138
+URL:https://hathaway.cc/calendars/college-football-top-25?v=1794955612
 NAME:College Football Top 25
 X-WR-CALNAME:College Football Top 25
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:espn-college-football-401858526
+UID:espn-college-football-401858529
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T020000Z
-DTEND:20261114T053000Z
-SUMMARY:🏈 Illinois Fighting Illini at #8 UCLA Bruins
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T010000Z
+DTEND:20261121T043000Z
+SUMMARY:🏈 #16 Oregon Ducks at Michigan State Spartans
 LOCATION:Watch on Fox
 DESCRIPTION:
 URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185852
- 6
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856860
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T031500Z
-DTEND:20261114T064500Z
-SUMMARY:🏈 #17 Houston Cougars at Colorado Buffaloes
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185686
- 0
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401858296
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T170000Z
-DTEND:20261114T203000Z
-SUMMARY:🏈 Duke Blue Devils at #1 Miami Hurricanes
-LOCATION:Watch on ABC
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185829
- 6
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401858522
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T170000Z
-DTEND:20261114T203000Z
-SUMMARY:🏈 Northwestern Wildcats at #12 Ohio State Buckeyes
-LOCATION:Watch on Fox
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185852
- 2
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401858301
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T170000Z
-DTEND:20261114T203000Z
-SUMMARY:🏈 #16 Wake Forest Demon Deacons at SMU Mustangs
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185830
- 1
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856889
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T174500Z
-DTEND:20261114T211500Z
-SUMMARY:🏈 #5 Alabama Crimson Tide at Vanderbilt Commodores
-LOCATION:Watch on SEC Network
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185688
  9
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856888
+UID:espn-college-football-401856866
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T200000Z
-DTEND:20261114T233000Z
-SUMMARY:🏈 #13 Tennessee Volunteers at Texas A&M Aggies
-LOCATION:Watch on ESPN
-DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185688
- 8
-END:VEVENT
-BEGIN:VEVENT
-UID:espn-college-football-401856883
-SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T203000Z
-DTEND:20261115T000000Z
-SUMMARY:🏈 #18 Missouri Tigers at #2 Georgia Bulldogs
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T170000Z
+DTEND:20261121T203000Z
+SUMMARY:🏈 #10 BYU Cougars at Kansas Jayhawks
 LOCATION:Watch on ABC
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185688
- 3
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185686
+ 6
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401858518
+UID:espn-college-football-401858310
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T203000Z
-DTEND:20261115T000000Z
-SUMMARY:🏈 #20 USC Trojans at #4 Indiana Hoosiers
-LOCATION:Watch on CBS
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T170000Z
+DTEND:20261121T203000Z
+SUMMARY:🏈 #13 Wake Forest Demon Deacons at Georgia Tech Yellow Jackets
+LOCATION:Watch on ESPN
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185851
- 8
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185831
+ 0
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401856858
+UID:espn-college-football-401856749
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T203000Z
-DTEND:20261115T000000Z
-SUMMARY:🏈 Baylor Bears at #9 BYU Cougars
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T170000Z
+DTEND:20261121T203000Z
+SUMMARY:🏈 Wofford Terriers at #19 Ole Miss Rebels
+LOCATION:Watch on SECN+
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185674
+ 9
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401858531
+SEQUENCE:0
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T170000Z
+DTEND:20261121T203000Z
+SUMMARY:🏈 #20 Ohio State Buckeyes at Nebraska Cornhuskers
 LOCATION:Watch on Fox
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185685
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185853
+ 1
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-college-football-401856868
+SEQUENCE:0
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T180000Z
+DTEND:20261121T213000Z
+SUMMARY:🏈 #14 Houston Cougars at West Virginia Mountaineers
+LOCATION:Watch on TNT
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185686
  8
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401858294
+UID:espn-college-football-401856746
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T203000Z
-DTEND:20261115T000000Z
-SUMMARY:🏈 Boston College Eagles at #11 Notre Dame Fighting Irish
-LOCATION:Watch on NBC
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T190000Z
+DTEND:20261121T223000Z
+SUMMARY:🏈 Chattanooga Mocs at #3 Alabama Crimson Tide
+LOCATION:Watch on SECN+
 DESCRIPTION:
-URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185829
- 4
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185674
+ 6
 END:VEVENT
 BEGIN:VEVENT
-UID:espn-college-football-401858523
+UID:espn-college-football-401858527
 SEQUENCE:0
-DTSTAMP:20261110T211218Z
-DTSTART:20261114T203000Z
-DTEND:20261115T000000Z
-SUMMARY:🏈 Michigan Wolverines at #23 Oregon Ducks
-LOCATION:Watch on FS1
+DTSTAMP:20261117T224652Z
+DTSTART:20261121T193000Z
+DTEND:20261121T230000Z
+SUMMARY:🏈 #15 Iowa Hawkeyes at Illinois Fighting Illini
+LOCATION:Watch on BTN
 DESCRIPTION:
 URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185852
- 3
+ 7
 END:VEVENT
 END:VCALENDAR
