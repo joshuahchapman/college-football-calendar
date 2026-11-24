@@ -1,10 +1,22 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hathaway.cc//college-football-calendar//EN
-URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17949
- 55613
+URL:https://hathaway.cc/calendars/college-football-top-25-matchups?v=17955
+ 63962
 NAME:College Football Top 25 Matchups
 X-WR-CALNAME:College Football Top 25 Matchups
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:espn-college-football-401856761
+SEQUENCE:0
+DTSTAMP:20261124T234602Z
+DTSTART:20261128T170000Z
+DTEND:20261128T203000Z
+SUMMARY:🏈 #23 Louisville Cardinals at #16 Kentucky Wildcats
+LOCATION:Watch on ESPN2
+DESCRIPTION:
+URL;VALUE=URI:https://www.espn.com/college-football/game/_/gameId/40185676
+ 1
+END:VEVENT
 END:VCALENDAR
